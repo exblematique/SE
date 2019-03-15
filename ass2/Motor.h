@@ -5,19 +5,20 @@ class RotationMotor
 {
   public:
     RotationMotor();
-    RotationMotor(double width, double height);
-
+    
     // setters and getters
     void start();
     void shutdown();
     void restart();
-    void incRPM();
-    void decRPM();
+    void incRPM(int value);
+    void decRPM(int value);
     double getRpm() const;
     
   private:
-    double width_;
-    double height_;
+    int rpm_;
+    bool start;
+    const int maxRPM = 5000;
+    const int maxModif = 1000;
 };
 
 #endif
