@@ -1,0 +1,19 @@
+#ifndef MOTOR_H
+#define MOTOR_H
+
+class RotationMotor
+{
+  public:
+    Rectangle();
+    Rectangle(double width, double height);
+
+    // setters and getters
+    double getRpm() const;
+    void restart();
+
+  private:
+    double width_;
+    double height_;
+};
+
+#endif
