@@ -1,0 +1,2 @@
+Motor.o: Motor.cpp Motor.h
+main.o: main.cpp Motor.h
