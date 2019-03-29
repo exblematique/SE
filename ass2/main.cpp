@@ -11,12 +11,36 @@ int main()
    r1.restart();
    r1.start();
    
-   r1.setWidth(r2.getWidth() * r2.getWidth());
-   
-   cout << "r2 = ";
-   r2.print();
-   cout << endl;
-   cout << "Surface area r2 = " << r2.surfaceArea() << endl;
+   r1.incRPM();
+   cout << "RPM: " << r1.getRPM() << endl;
+   r1.incRPM();
+   r1.incRPM();
+   r1.incRPM();
+   r1.incRPM();
+   r1.incRPM();
+   r1.incRPM();
+   r1.incRPM();
+   r1.incRPM();
+   cout << "RPM: " << r1.getRPM() << endl;
+   r1.decRPM();
+   cout << "RPM: " << r1.getRPM() << endl;
+   r1.restart();
+   cout << "RPM: " << r1.getRPM() << endl;
 
+   r1.decRPM();
+   r1.decRPM();
+   r1.decRPM();
+   r1.decRPM();
+   r1.decRPM();
+   r1.decRPM();
+   r1.decRPM();
+   r1.decRPM();
+   r1.decRPM();
+   r1.decRPM();
+   r1.decRPM();
+   cout << "RPM: " << r1.getRPM() << endl;
+     
+   r1.shutdown();
+   cout << "Don't display this message";
    return 0;
 }

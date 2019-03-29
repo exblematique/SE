@@ -1,24 +1,31 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 int main() {
   using namespace std;
+  string txt;
+  string out = "";
+  while (true) {
 
-  string a = "Try ";
-  string b = "Again";
-  b += "?";
-  b[b.size()-1] = '!';
-  for (unsigned int i=0; i<b.size(); i++){
-    switch (b[i]) {
-      case 'A':
-	b[i] = 'a';
-	break;
-      case 'a':
-	b[i] = 'A';
-	break;
-    }    
+    cout << "Nombre à entrer : ";
+    cin >> txt;
+    cout << txt << "\n";
+    for (int i=0; i<txt.length(); i++){
+      if (txt[i] == ' '){
+        char c = (char)(atoi(out.c_str()) + 64);
+        cout << "out: " << out << "   c: " << c << endl;
+        out = "";
+      }
+      else{
+        out.append(&txt[i]);
+      }
+    }
+    if (out != ""){
+        char c = (char)(atoi(out.c_str()) + 64);
+        out = "";
+        cout << c << "\n";
+    }
   }
-  cout << a << b << endl;
-
   return 0;
 }

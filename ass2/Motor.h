@@ -10,15 +10,16 @@ class RotationMotor
     void start();
     void shutdown();
     void restart();
-    void incRPM(int value);
-    void decRPM(int value);
-    double getRpm() const;
+    void incRPM();
+    void decRPM();
+    int getRPM() const;
     
   private:
     int rpm_;
-    bool start;
-    const int maxRPM = 5000;
-    const int maxModif = 1000;
+    bool start_;
+    static const int maxRPM_ = 5000;
+    static const int minRPM_ = -5000;
+    static const int incr_ = 1000;
 };
 
 #endif
