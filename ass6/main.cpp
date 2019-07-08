@@ -30,5 +30,7 @@ int main(void)
 	cv1.setY(-1.0);
 	cout << "New cv1 values: x_=" << cv1.getX() << " and y_=" << cv1.getY() << endl;
 	
+	cout << "(2.1 * -cv1) + cv2 = " << (2.1 * -cv1) + cv2 << endl;
+	
 	return 0;
 }
